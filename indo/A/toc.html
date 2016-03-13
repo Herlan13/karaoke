@@ -1,0 +1,192 @@
+﻿<HTML>
+<!--This file created 16:22  19/12/2004 by Claris Home Page version 3.0-->
+<HEAD>
+   <BASE TARGET=main>
+   <title>toc.html</title>
+   <META NAME=GENERATOR CONTENT="Microsoft FrontPage 6.0">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"><META NAME="Author" Content="Djoko Luknanto">
+<style type="text/css">
+<!--
+a:link {
+	color: #360;
+	text-decoration:none;
+	font-style: normal;
+	font-weight: bold;
+}
+a:visited {
+	color: #030;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hover {
+	color: #333;
+	font-weight: bolder;
+	background-image: url(th_stars1.gif);
+	text-decoration: none;
+}
+
+a:active {
+	color: #666;
+	padding-left: 0px;
+	text-decoration: none;
+}
+body,td,th {
+	color: #000;
+	font-weight: bold;
+}
+body {
+	background-color: #FFF;
+	background-image: url()
+}#herlanbar{
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	border-bottom: 1px solid #cccccc;
+	font-size: 90%;
+	background-color:#339900;
+}
+
+#herlanbar h3{
+	padding: 10px 0px 2px 10px;
+}
+
+#herlanbar a:link{
+	padding: 2px 0px 2px 10px;
+	border-top: 1px solid #cccccc;
+	width: 100%;
+	voice-family: "\"}\""; 
+	voice-family:inherit;
+	width: auto;color: #fff;
+}
+
+#herlanbar a:visited{
+	border-top: 1px solid #cccccc;
+	padding: 2px 0px 2px 10px;color: #fff;
+}
+
+#herlanbar a:hover{
+	border-top: 1px solid #222;
+	background-color:#006600;
+	padding: 2px 0px 2px 10px;
+	
+	
+}
+#herlanbar ul a:link, #navBar ul a:visited {display: block;}
+#herlanbar ul {list-style: none; margin: 0; padding: 0;}
+
+
+#herlanbar li {border-bottom: 1px solid #EEE;}
+
+/* fix for browsers that don't need the hack */
+html>body #navBar li {border-bottom: none;}
+.style1 {
+	color: #FFCC99;
+	font-weight: bold;
+}
+
+.herlan{
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	border-bottom: 1px solid #cccccc;
+	font-size: 90%;
+	background-color: #586257;
+}
+.herlan a:hover{
+	position: relative;
+	background-color:#060;
+	
+}
+
+.herlan ul a:link, #navBar ul a:visited {display: block;}
+.herlan ul {list-style: none; margin: 0; padding: 0;}
+
+
+.herlan li {border-bottom: 1px solid #EEE;}
+
+
+
+
+
+a:link {
+	color: #666600;
+	text-decoration:none;
+	font-style: normal;
+	font-weight: bold;
+}
+a:visited {
+	color: #666600;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hover {
+	color: #000000;
+	font-weight: bold;
+	background-image: url(images/th_stars1.gif);
+	text-decoration: none;
+}
+
+a:active {
+	color: #666;
+	padding-left: 0px;
+	text-decoration: none;
+}
+body {
+	background-color: #FFF;
+	background-image: url(images/black_wood.jpg);
+	background-attachment: fixed;
+	background-size:100% 100%;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+
+
+-->
+</style>
+
+<link href="style.css" rel="stylesheet" type="text/css">
+<script>
+var numposts = 500;
+var standardstyling = true;
+</script>
+
+<script async='async' type="text/javascript">
+
+function showrecentposts(json) {
+  for (var i = 0; i < numposts; i++) {
+    var entry = json.feed.entry[i];
+    var posttitle = entry.title.$t;
+    var posturl;
+    if (i == json.feed.entry.length) break;
+    for (var k = 0; k < entry.link.length; k++) {
+      if (entry.link[k].rel == 'alternate') {
+        posturl = entry.link[k].href;
+        break;
+      }}
+    posttitle = posttitle.link(posturl);
+    if (standardstyling) document.write('<li>');
+    document.write(posttitle);}
+    if (standardstyling) document.write('</li>');
+document.write('<div style="font-family:Arial; font-size:85%; margin-top:5px;"><a href="http://herlanlesmana26.blogspot.com/2010/04/menampilkan-judul-artikel-dari-satu.html" target="_blank">Powered by Herlan Lesmana</a></div>');
+}
+</script>
+</HEAD>
+
+<BODY><br><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td >
+<ol>
+<script src="http://daftarkaraoke.blogspot.com/feeds/posts/default/-/Indo%20A?orderby=published&alt=json-in-script&callback=showrecentposts&max-results=999"></script>
+</ol>  
+        
+         </td>
+  </tr>
+</table>
+<br><br> 
+
+</BODY>
+</HTML>
